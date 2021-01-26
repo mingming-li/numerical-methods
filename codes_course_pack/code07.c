@@ -37,7 +37,7 @@ int number;
        // Lets see if the number is either less than 5 or greater  
        // than 10. 
  
-       if ( (number < 5) || (number > 10) ) 
+       if ( (number < 5) || (number > 10 && number<6) ) 
        { 
            fprintf(stdout,"This number is either less than 5 or greater than 10\n"); 
        } 

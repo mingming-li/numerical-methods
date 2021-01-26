@@ -21,7 +21,7 @@ double F=6.0;
 // IF statement is finished.  Only the one line 
 // IF statements require a semicolon at the end. 
  
-     if (B > A) fprintf(stdout,"%f is bigger than %f\n", B,A); 
+     if (B > A) {fprintf(stdout,"%f is bigger than %f\n", B,A); }
  
  
 // We can add multiple commands to our IF by putting  
@@ -29,8 +29,8 @@ double F=6.0;
 
 // brackets will be done if B is greater than A. 
  
-     if (B>A) 
-     { 
+     if (B>A)
+     {
         fprintf(stdout,"B is bigger than A.\n"); 
         fprintf(stdout,"Thats pretty cool.\n"); 
         fprintf(stdout,"I think A should be +1 bigger though\n"); 
@@ -41,7 +41,7 @@ double F=6.0;
          A = A + 1; 
  
          fprintf(stdout,"Now A is %f\n", A); 
-     } 
+     }
  
 // lets create three blank lines in the output 
  
@@ -102,9 +102,7 @@ else
             { 
                fprintf(stdout,"B is also smaller than D\n"); 
                if (B<C) 
-               { 
                    fprintf(stdout,"B is also smaller than C\n"); 
-               } 
             } 
         } 
      } 
