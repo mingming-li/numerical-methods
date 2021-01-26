@@ -13,7 +13,8 @@ int main(void)
 // The first part of a code involves the declaration of variables. 
  
 // beginning of declarations 
-int number_of_apples, number_of_oranges; 
+int number_of_apples;
+int number_of_oranges; 
 int number_of_people; 
 int total_number_of_fruit; 
  
@@ -33,8 +34,8 @@ double oranges_per_person;
      total_number_of_fruit = number_of_apples + number_of_oranges; 
  
      apples_per_person = number_of_apples/number_of_people; 
-     oranges_per_person = 
-             (number_of_oranges*1.0)/(number_of_people*1.0); 
+     oranges_per_person = (number_of_oranges*1.0)/(number_of_people*1.0); 
+          
  
 // lets print some results 
  
