@@ -2,7 +2,7 @@
 #include<stdlib.h> 
 #include<math.h> 
 
-//find the solution of x^3+2*x-5=0
+//find the solution of x^3+2*x-5=0 for x between (0,2)
  
 void main(void) 
 { 
