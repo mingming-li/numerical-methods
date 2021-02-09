@@ -31,7 +31,7 @@ for(n=2;n<1000;n=n+1)
                 area = (f(x1)+f(x2)) + area;
         }
 	area=area*h/2;
-        fprintf(fp,"%d %f\n",n,area);
+        fprintf(fp,"%d %f 2.8\n",n,area);
 }
 fclose(fp);
         return 0;
