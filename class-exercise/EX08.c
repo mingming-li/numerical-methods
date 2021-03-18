@@ -59,6 +59,7 @@ for(a=0.0;a<=3.1;a=a+0.01)
 				fsub[1]=f[i-1];
 				fsub[2]=f[i-2];
 				fsub[3]=f[i-3];
+				break;
 			}
 			else
 			{
