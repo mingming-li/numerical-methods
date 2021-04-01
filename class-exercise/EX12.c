@@ -5,7 +5,7 @@
 
 double p(),q(),r();
 
-int main(void)
+int main(int argc, char **argv)
 {
 int i,n,k;
 // i is the index for nodal points
@@ -14,7 +14,7 @@ int i,n,k;
 double a,b,c,d,h;
 //a, b, c, d are constants
 //h is the length of each sub-interval
-double *x,*y,*temp_y;
+double *x,*y,*temp_y,diff;
 
 n=10;
 
@@ -40,7 +40,8 @@ for(i=1;i<=n-1;i++)
 }
 
 
-for(k=0;k<=1000;k++)
+k=0;
+while(1)
 {
 //Jacobi method
 	for(i=1;i<=n-1;i++)
@@ -52,14 +53,27 @@ for(k=0;k<=1000;k++)
 		temp_y[i]=(d-a*y[i-1]-c*y[i+1])/b;
 	}
 
+	diff=0.0;
+	for(i=1;i<=n-1;i++)
+	{
+		if(fabs(y[i]-temp_y[i])>diff)
+		{
+			diff=fabs(y[i]-temp_y[i]);
+		}
+	}
+	if(diff<1e-6)
+	{
+		break;
+	}
 	for(i=1;i<=n-1;i++)
 		y[i]=temp_y[i];
+	k++;
+}
+printf("%d iterations used\n",k);
 
-	for(i=0;i<=n;i++)
-	{
-		printf("x[%d]=%f y[%d]=%f\n",i,x[i],i,y[i]);
-	}
-
+for(i=0;i<=n;i++)
+{
+	printf("x[%d]=%f y[%d]=%f\n",i,x[i],i,y[i]);
 }
 
 free(x);
