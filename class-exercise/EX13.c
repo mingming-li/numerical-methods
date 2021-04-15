@@ -21,9 +21,10 @@ A=malloc(np*sizeof(double));
 a=malloc(np*sizeof(double));
 b=malloc(np*sizeof(double));
 
-if(np%2==0)np--;
+if(np%2==0)np=np-1;
+	
 
-dx=4.0*M_PI/(np-1);
+dx=(4.0*M_PI+1.0)/(np-1);
 
 for(i=1;i<=np;i++)
 {
