@@ -20,6 +20,7 @@ double func3(x)
 	return cos(M_PI*x);
 }
 
+
 int main(int argc, char **argv)
 {
 double (*f[4])();
@@ -30,7 +31,7 @@ int i,j,n,l;
 char string[256],fname[256];
 FILE *fp;
 
-m=3;
+m=1;
 f[1]=func1;
 f[2]=func2;
 f[3]=func3;
@@ -38,10 +39,10 @@ f[3]=func3;
 a=malloc((m+1)*sizeof(double));
 temp_a=malloc((m+1)*sizeof(double));
 B=malloc((m+1)*sizeof(double));
+
 A=malloc((m+1)*sizeof(double *));
 for(i=1;i<=m;i++)
-	A[i]=malloc((m+1)*sizeof(double *));
-
+	A[i]=malloc((m+1)*sizeof(double));
 
 if(argc<2)
 {
@@ -132,8 +133,11 @@ while(1)
 	}
 
 	if(diff<1e-6)
+	{
 		break;
+	}
 
+		
 }
 
 for(i=1;i<=n;i++)
