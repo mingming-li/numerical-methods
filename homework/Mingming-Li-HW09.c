@@ -43,14 +43,6 @@ printf("y(10.0)=%f\n",y);
 
 return 0;
 
-
-
-for(n=1;n<=100000;n*=2)
-{
-	printf("%10d %f %f %f %f %f\n",n,Euler(n,x0,y0,g0,x1),BackEuler(n,x0,y0,g0,x1),Heun(n,x0,y0,g0,x1),Midpoint(n,x0,y0,g0,x1),RK4(n,x0,y0,g0,x1));
-}
-
-return 0;
 }
 
 double Euler(n,x0,y0,g0,x1)
